@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="Perfil profesional de Iago Fuentefría Jareño: coordinación de operaciones, gestión comercial, clientes, KPI y mejora de procesos.">
+  <title>Iago Fuentefría Jareño · Operaciones y gestión comercial</title>
+  <style>
+    :root {
+      --paper: #f4f0e7;
+      --surface: #fffdf8;
+      --ink: #123e3b;
+      --ink-soft: #60706d;
+      --deep: #123e3b;
+      --deep-2: #1d504c;
+      --line: #d6d1c6;
+      --coral: #d95740;
+      --gold: #e4b84e;
+      --mint: #d9e2d8;
+      --white: #fffdf8;
+      --shadow: 0 24px 54px rgba(21, 57, 55, .13);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    [data-theme="dark"] {
+      --paper: #0f2625;
+      --surface: #173432;
+      --ink: #f7f2e7;
+      --ink-soft: #c5d0cc;
+      --deep: #071f1e;
+      --deep-2: #163b39;
+      --line: #42615d;
+      --mint: #244542;
+      --shadow: 0 24px 54px rgba(0, 0, 0, .28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
+    button, a { font: inherit; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      left: 1rem;
+      top: .75rem;
+      padding: .7rem 1rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #172d2b;
+      transform: translateY(-180%);
+      transition: transform .2s ease;
+      font-weight: 800;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .shell { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 91%, transparent);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      text-decoration: none;
+      font-weight: 850;
+      letter-spacing: -.02em;
+    }
+    .monogram {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      aspect-ratio: 1;
+      border-radius: 13px;
+      background: var(--deep);
+      color: var(--white);
+      font-size: .85rem;
+      letter-spacing: .04em;
+    }
+    .nav-wrap, .main-nav { display: flex; align-items: center; gap: .35rem; }
+    .main-nav a {
+      padding: .55rem .7rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: .92rem;
+    }
+    .main-nav a:hover { background: var(--mint); }
+    .theme-toggle {
+      position: relative;
+      width: 54px;
+      min-width: 54px;
+      height: 32px;
+      min-height: 32px;
+      padding: 2px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 25%, transparent);
+    }
+    .theme-toggle::after { content: "☀"; position: absolute; right: 6px; top: 4px; font-size: .9rem; line-height: 1; }
+    .theme-toggle[aria-pressed="true"]::after { content: "☾"; left: 6px; right: auto; color: var(--white); }
+    .toggle-knob { display: block; width: 26px; height: 26px; border-radius: 50%; background: var(--deep); transition: transform .22s ease, background .22s ease; }
+    .theme-toggle[aria-pressed="true"] .toggle-knob { transform: translateX(22px); background: var(--gold); }
+    .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; }
+
+    .hero { padding: clamp(2.8rem, 4.55vw, 3.6rem) 0 4rem; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 0 0 1rem;
+      color: var(--coral);
+      font-size: .79rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 32px; height: 3px; background: currentColor; }
+    h1, h2, h3, h4, p { overflow-wrap: anywhere; }
+    h1, h2, h3 { font-family: Bahnschrift, "Arial Narrow", Arial, sans-serif; }
+    h1 {
+      max-width: 11ch;
+      margin: 0;
+      font-family: Bahnschrift, "Arial Narrow", Arial, sans-serif;
+      font-size: clamp(3rem, 4.4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -.045em;
+    }
+    .role-line {
+      max-width: 720px;
+      margin: .75rem 0 1.2rem;
+      font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+    .hero-copy { max-width: 67ch; color: var(--ink-soft); font-size: 1.08rem; }
+    .contact-note { margin: 2.3rem 0 0; color: var(--ink-soft); font-size: .92rem; }
+    .proposal-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 510px;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border-radius: 30px;
+      background: var(--deep);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .panel-kicker {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--gold);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: .72rem;
+      font-weight: 850;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .panel-kicker span:last-child { color: #9fb8b2; }
+    .honeycomb {
+      position: relative;
+      width: min(100%, 430px);
+      aspect-ratio: 1.13;
+      margin: .65rem auto 0;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,.16));
+    }
+    .hex {
+      --hex-border: #98bcb3;
+      --hex-fill: #164440;
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: 35%;
+      aspect-ratio: 1.1547;
+      display: grid;
+      place-items: center;
+      padding: 1rem .55rem;
+      background: var(--hex-border);
+      clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .hex::before {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      background: var(--hex-fill);
+      clip-path: inherit;
+    }
+    .hex-content { position: relative; z-index: 1; line-height: 1.05; }
+    .hex small {
+      display: block;
+      margin-bottom: .24rem;
+      color: #b9cbc6;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: clamp(.5rem, .75vw, .65rem);
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .hex strong { display: block; color: #fff; font-size: clamp(.73rem, 1.2vw, 1rem); }
+    .hex em { display: block; margin-top: .2rem; color: #c6d6d2; font-size: clamp(.56rem, .82vw, .7rem); font-style: normal; }
+    .hex--center { --hex-border: #fffdf8; --hex-fill: #f4f0e7; z-index: 2; }
+    .hex--center small, .hex--center em { color: #667572; }
+    .hex--center strong { color: #173a39; font-size: clamp(.9rem, 1.45vw, 1.18rem); }
+    .hex--control { --hex-border: var(--gold); }
+    .hex--relation { --hex-border: var(--coral); }
+    .hex--execution { --hex-border: #9fc2b8; }
+    .panel-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem 1rem;
+      margin-top: .3rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,.16);
+      color: #c6d6d2;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: .66rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .panel-legend span { display: inline-flex; align-items: center; gap: .4rem; }
+    .panel-legend i { width: 8px; height: 8px; background: var(--gold); }
+    .panel-legend span:nth-child(2) i { background: var(--coral); }
+    .panel-legend span:nth-child(3) i { background: #9fc2b8; }
+    .panel-caption { margin: .75rem 0 0; color: #b9cbc6; font-size: .78rem; line-height: 1.45; }
+
+    .section { padding: 4rem 0; }
+    .section-head { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem 2rem; align-items: end; margin-bottom: 1.5rem; }
+    .section-head h2 { margin: 0; max-width: none; font-size: clamp(2rem, 3.4vw, 3.05rem); line-height: 1.02; letter-spacing: -.045em; }
+    .section-head p { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+    .metric-strip { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+    .metric-cell { min-height: 152px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .metric-cell:nth-child(2) { background: var(--gold); color: #173a39; }
+    .metric-cell:nth-child(3) { background: var(--coral); color: #fff; }
+    .metric-cell strong { display: block; font-family: Bahnschrift, Arial, sans-serif; font-size: clamp(2.4rem, 4vw, 3.35rem); line-height: .9; letter-spacing: -.05em; }
+    .metric-cell small { display: block; margin-top: .65rem; font-family: Consolas, monospace; font-size: .67rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .metric-cell p { margin: .65rem 0 0; color: inherit; font-size: .85rem; line-height: 1.4; }
+    .metric-cell--timeline strong { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+    .timeline-dots { display: grid; grid-template-columns: repeat(5, 1fr); margin: 1rem 0 .55rem; }
+    .timeline-dots span { position: relative; padding-top: 1rem; text-align: center; font-family: Consolas, monospace; font-size: .61rem; color: var(--ink-soft); }
+    .timeline-dots span::before { content: ""; position: absolute; left: 50%; top: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--deep); transform: translateX(-50%); }
+    .timeline-dots span:last-child::before { background: var(--coral); }
+    .metrics-note { margin: .85rem 0 0; color: var(--ink-soft); font-size: .82rem; }
+
+    .trajectory { background: var(--deep); color: var(--white); }
+    .trajectory .section-head p { color: #c5d5d1; }
+    .timeline { display: grid; gap: 1rem; }
+    .job {
+      display: grid;
+      grid-template-columns: minmax(210px, .72fr) minmax(0, 1.6fr);
+      gap: 2rem;
+      padding: clamp(1.35rem, 2.2vw, 1.7rem);
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.045);
+    }
+    .job time { color: var(--gold); font-size: .79rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .job h3 { margin: .4rem 0 .2rem; font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.05; letter-spacing: -.03em; }
+    .company { margin: 0; color: #b9cbc7; font-weight: 750; }
+    .role-list { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1rem; }
+    .role-list span { padding: .25rem .55rem; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: .8rem; }
+    .job ul { margin: 0; padding-left: 1.2rem; }
+    .job li + li { margin-top: .5rem; }
+    .job li::marker { color: var(--gold); }
+    .level-box { grid-column: 2; padding: 1.2rem; border-left: 4px solid var(--coral); border-radius: 0 16px 16px 0; background: rgba(255,255,255,.07); }
+    .level-box h4 { margin: 0 0 .8rem; color: var(--gold); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+    .level-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .9rem 1.1rem; }
+    .level-grid p { margin: 0; color: #d7e2df; font-size: .93rem; }
+    .level-grid strong { display: block; color: var(--white); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+    .disclaimer { margin-top: .8rem !important; color: #f2d8ce !important; font-size: .84rem !important; }
+
+    .capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .capability { min-height: 250px; padding: 1.5rem; border: 1px solid var(--line); border-top: 5px solid var(--deep); border-radius: 0 0 22px 22px; background: var(--surface); }
+    .capability:nth-child(2) { border-top-color: var(--coral); }
+    .capability:nth-child(3) { border-top-color: var(--gold); }
+    .capability .num { color: var(--coral); font-weight: 900; letter-spacing: .09em; font-size: .8rem; }
+    .capability h3 { margin: 1rem 0 .6rem; font-size: 1.55rem; line-height: 1.1; }
+    .capability p { color: var(--ink-soft); }
+    .capacity-proof { margin: 1rem 0 0; font-size: .83rem; }
+
+    .tools-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+    .training-card { min-height: 360px; padding: clamp(1.6rem, 4vw, 2.7rem); border-radius: var(--radius); background: var(--coral); color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+    .training-card h3 { margin: 0 0 1.3rem; color: #fff; font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.05; }
+    .training-card ol { margin: 1.5rem 0 0; padding-left: 1.2rem; }
+    .training-card li + li { margin-top: .65rem; }
+    .tools-card { padding: clamp(1.6rem, 4vw, 2.7rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+    .tools-card h3 { margin-top: 0; font-size: 1.45rem; }
+    .tools-card > p { color: var(--ink-soft); }
+    .chips { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+    .chips span { padding: .55rem .75rem; border-radius: 10px; background: var(--paper); font-weight: 780; }
+    .market-box { margin-top: 1.4rem; padding: 1rem; border: 1px dashed var(--coral); border-radius: 14px; }
+    .market-box h4 { margin: 0 0 .4rem; }
+    .market-box p { margin: 0; color: var(--ink-soft); }
+
+    .next-step { width: min(100% - 2rem, var(--max)); margin: 0 auto 3rem; padding: clamp(1.7rem, 4.45vw, 3.5rem); border-radius: 30px; background: var(--deep); color: #fff; }
+    .next-step h2 { max-width: 12ch; margin: 0 0 .8rem; color: #fff; font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.03; letter-spacing: -.04em; }
+    .next-step p:last-child { margin: 0; color: #ccdad6; }
+    footer { border-top: 1px solid var(--line); padding: 1.5rem 0 2.5rem; color: var(--ink-soft); }
+    footer .shell { display: flex; justify-content: space-between; gap: 1rem; }
+
+    @media (max-width: 900px) {
+      .main-nav { display: none; }
+      .hero-grid, .section-head, .tools-layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 3.5rem; }
+      .section-head { align-items: start; }
+      .section-head h2 { max-width: none; }
+      .job { grid-template-columns: 1fr; }
+      .level-box { grid-column: 1; }
+      .capability-grid { grid-template-columns: 1fr; }
+      .capability { min-height: 0; }
+      .metric-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .shell { width: min(100% - 1.1rem, var(--max)); }
+      .brand > span:last-child { display: inline; font-size: .9rem; }
+      .header-inner { min-height: 64px; }
+      .theme-toggle { padding: 2px; }
+      .hero { padding-top: 2.8rem; }
+      h1 { font-size: clamp(2.7rem, 16vw, 4.25rem); }
+      .proposal-card { min-height: 430px; border-radius: 24px; padding: 1rem; }
+      .panel-kicker { font-size: .6rem; }
+      .honeycomb { width: min(100%, 330px); margin-top: .35rem; }
+      .hex { width: 37%; padding: .7rem .35rem; }
+      .hex small { font-size: .46rem; }
+      .hex strong { font-size: .7rem; }
+      .hex em { font-size: .5rem; }
+      .hex--center strong { font-size: .84rem; }
+      .panel-legend { gap: .4rem .7rem; font-size: .57rem; }
+      .level-grid { grid-template-columns: 1fr; }
+      .metric-strip { grid-template-columns: 1fr; border-radius: 16px; }
+      .metric-cell { min-height: 125px; }
+      .job { padding: 1.15rem; gap: 1.25rem; }
+      .level-box { padding: 1rem; }
+      footer .shell { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+
+    @media print {
+      :root { --paper: #fff; --surface: #fff; --ink: #132e2c; --ink-soft: #3e5552; --deep: #123b39; --line: #b8b8b8; }
+      body { font-size: 10.5pt; }
+      .site-header, .skip-link, .theme-toggle { display: none !important; }
+      .shell { width: 100%; }
+      .hero, .section { padding: 1.5rem 0; }
+      .hero-grid, .section-head, .tools-layout { grid-template-columns: 1fr; }
+      .proposal-card, .trajectory, .training-card, .next-step { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .job { break-inside: avoid; }
+      .trajectory { padding-inline: 1rem; }
+      .theme-toggle { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio del perfil de Iago Fuentefría Jareño">
+        <span class="monogram" aria-hidden="true">IF</span>
+        <span>Iago Fuentefría Jareño</span>
+      </a>
+      <div class="nav-wrap">
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#mapa">Mapa</a>
+          <a href="#trayectoria">Trayectoria</a>
+          <a href="#capacidades">Capacidades</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Activar modo oscuro">
+          <span class="toggle-knob" aria-hidden="true"></span><span class="theme-label visually-hidden">Oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="nombre">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Trayectoria profesional</p>
+          <h1 id="nombre">Iago Fuentefría Jareño</h1>
+          <p class="role-line">Coordinación de operaciones y gestión comercial</p>
+          <p class="hero-copy">Perfil híbrido con más de 15 años en operaciones, administración, atención al cliente y ventas. Conecta documentación, logística, equipos, cartera comercial e indicadores para sostener una operación ordenada y orientada al cliente.</p>
+          <p class="contact-note">Madrid · disponibilidad inmediata · presencial, remoto o híbrido</p>
+        </div>
+        <aside class="proposal-card" aria-label="Panal del sistema profesional de Iago: la operación conecta KPI, cartera, cliente, incidencias, documentación y planificación">
+          <div class="panel-kicker"><span>Sistema profesional · operaciones</span><span>Flujos / relación</span></div>
+          <div class="honeycomb" role="img" aria-label="Operación en el centro, conectada con KPI, cartera, cliente, incidencias, documentación y planificación">
+            <div class="hex hex--control" style="--x:50%;--y:17%" aria-hidden="true"><span class="hex-content"><small>Control</small><strong>KPI</strong><em>seguimiento</em></span></div>
+            <div class="hex hex--relation" style="--x:76%;--y:34%" aria-hidden="true"><span class="hex-content"><small>Comercial</small><strong>Cartera</strong><em>venta consultiva</em></span></div>
+            <div class="hex hex--relation" style="--x:76%;--y:66%" aria-hidden="true"><span class="hex-content"><small>Relación</small><strong>Cliente</strong><em>atención</em></span></div>
+            <div class="hex hex--execution" style="--x:50%;--y:83%" aria-hidden="true"><span class="hex-content"><small>Soporte</small><strong>Incidencias</strong><em>resolución</em></span></div>
+            <div class="hex hex--execution" style="--x:24%;--y:66%" aria-hidden="true"><span class="hex-content"><small>Gestión</small><strong>Documentación</strong><em>contratos</em></span></div>
+            <div class="hex hex--control" style="--x:24%;--y:34%" aria-hidden="true"><span class="hex-content"><small>Coordinación</small><strong>Planificación</strong><em>capacidad</em></span></div>
+            <div class="hex hex--center" style="--x:50%;--y:50%" aria-hidden="true"><span class="hex-content"><small>Núcleo</small><strong>Operación</strong><em>orden + servicio</em></span></div>
+          </div>
+          <div class="panel-legend" aria-hidden="true"><span><i></i>Control</span><span><i></i>Relación comercial</span><span><i></i>Ejecución y soporte</span></div>
+          <p class="panel-caption">La operación conecta documentación, capacidad y seguimiento con la cartera, la atención al cliente y la resolución de incidencias.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="mapa" aria-labelledby="mapa-title">
+      <div class="shell">
+        <div class="section-head">
+          <h2 id="mapa-title">Mapa de experiencia</h2>
+          <p>Indicadores extraídos del documento fuente. Representan hechos y conteos verificables; no son porcentajes de rendimiento ni estimaciones de impacto.</p>
+        </div>
+        <div class="metric-strip" aria-label="Evidencias verificables del recorrido profesional">
+          <article class="metric-cell"><div><strong>15+</strong><small>Años declarados</small></div><p>Experiencia en operaciones, administración, atención al cliente y ventas.</p></article>
+          <article class="metric-cell"><div><strong>8</strong><small>Contextos</small></div><p>Clicars · Línea Directa · Thomson Reuters · Tirant · Emergia y etapas anteriores.</p></article>
+          <article class="metric-cell"><div><strong>4</strong><small>Sectores</small></div><p>Automoción, banca, seguros y software.</p></article>
+          <article class="metric-cell metric-cell--timeline">
+            <strong>Línea temporal</strong>
+            <div class="timeline-dots" role="img" aria-label="Hitos del recorrido en 2010, 2015, 2017, 2021 y 2025"><span>2010</span><span>2015</span><span>2017</span><span>2021</span><span>2025</span></div>
+            <p>Cada hito amplía el alcance operativo y comercial.</p>
+          </article>
+        </div>
+        <p class="metrics-note">Conteos tomados del CV aportado: describen amplitud declarada, no una auditoría laboral.</p>
+      </div>
+    </section>
+
+    <section class="section trajectory" id="trayectoria" aria-labelledby="trayectoria-title">
+      <div class="shell">
+        <div class="section-head">
+          <h2 id="trayectoria-title">Trayectoria</h2>
+          <p>Los puntos principales son experiencia demostrable. Cuando aparece un ecosistema profesional, se identifica como recomendación actual y no como herramienta histórica confirmada.</p>
+        </div>
+        <div class="timeline">
+          <article class="job">
+            <div>
+              <time datetime="2021-08/2025-06">Ago. 2021 — Jun. 2025</time>
+              <h3>Gestión especialista y comercial</h3>
+              <p class="company">Clicars Spain S.L.</p>
+              <div class="role-list" aria-label="Puestos desempeñados"><span>Gestor especialista</span><span>Gestor comercial V.O.</span></div>
+            </div>
+            <ul>
+              <li>Controló y formalizó contratos de compra de vehículos a particulares y empresas.</li>
+              <li>Gestionó remesas de pago, reservas de dominio e incidencias administrativas.</li>
+              <li>Coordinó logística y realizó seguimiento de KPI del departamento.</li>
+              <li>Asesoró al equipo de compras para optimizar la adquisición de flota.</li>
+              <li>Gestionó el ciclo comercial completo por teléfono y de forma presencial.</li>
+              <li>Asesoró sobre vehículo, financiación y productos complementarios.</li>
+              <li>Controló, siguió y desarrolló la cartera de clientes para apoyar los objetivos comerciales.</li>
+            </ul>
+            <div class="level-box">
+              <h4>Estándar profesional del rol · referencia actual</h4>
+              <div class="level-grid">
+                <p><strong>Herramientas</strong>CRM y pipeline · gestor documental · dashboard de operaciones · ticketing</p>
+                <p><strong>IA aplicable</strong>Preclasificación documental · resúmenes de incidencias · borradores de informes KPI</p>
+                <p><strong>Método</strong>Checklists contractuales · coordinación diaria · revisión de cartera · trazabilidad de incidencias</p>
+                <p><strong>Indicadores</strong>Documentación correcta · tiempo de ciclo · incidencias · avance de cartera</p>
+              </div>
+              <p class="disclaimer"><strong>Importante:</strong> es una aplicación recomendada para el rol; el CV original no confirma que se utilizara IA en esta experiencia.</p>
+            </div>
+          </article>
+
+          <article class="job">
+            <div>
+              <time datetime="2021-03/2021-08">Mar. 2021 — Ago. 2021</time>
+              <h3>Gestor comercial</h3>
+              <p class="company">Línea Directa Aseguradora · Seguros de hogar</p>
+            </div>
+            <ul>
+              <li>Desarrolló actividad comercial especializada en seguros de hogar.</li>
+              <li>Realizó captación mediante llamadas salientes.</li>
+              <li>Preparó presupuestos personalizados según las necesidades del cliente.</li>
+              <li>Condujo la conversación comercial hasta el cierre de la venta.</li>
+            </ul>
+            <div class="level-box">
+              <h4>Estándar profesional del rol · referencia actual</h4>
+              <div class="level-grid">
+                <p><strong>Herramientas</strong>CRM de seguros · tarificador · telefonía comercial · panel de seguimiento</p>
+                <p><strong>IA aplicable</strong>Borradores de argumentarios y síntesis de necesidades con datos anonimizados y revisión humana</p>
+                <p><strong>Método</strong>Descubrimiento de necesidades · presupuesto comparado · seguimiento de oportunidad</p>
+                <p><strong>Indicadores</strong>Contactos · presupuestos · conversión · persistencia de póliza</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div>
+              <time datetime="2020-03/2020-09">Mar. 2020 — Sep. 2020</time>
+              <h3>Inside Sales Representative</h3>
+              <p class="company">Thomson Reuters</p>
+            </div>
+            <ul>
+              <li>Gestionó el crecimiento de una cartera de clientes.</li>
+              <li>Trabajó la renovación de servicios y licencias.</li>
+              <li>Recuperó bajas y desarrolló acciones de retención.</li>
+              <li>Aplicó venta consultiva B2B a soluciones digitales para el sector jurídico.</li>
+              <li>Comercializó bases de datos, herramientas de gestión para despachos y e-learning.</li>
+            </ul>
+            <div class="level-box">
+              <h4>Estándar profesional del rol · referencia actual</h4>
+              <div class="level-grid">
+                <p><strong>Herramientas</strong>CRM B2B · sales enablement · analítica de uso · gestión de renovaciones</p>
+                <p><strong>IA aplicable</strong>Preparación de reuniones, resúmenes de cuenta y borradores de seguimiento revisados</p>
+                <p><strong>Método</strong>Venta consultiva · revisión de pipeline · plan de renovación y recuperación</p>
+                <p><strong>Indicadores</strong>Renovación · retención · recuperación · crecimiento de cartera</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div>
+              <time datetime="2017-10/2020-01">Oct. 2017 — Ene. 2020</time>
+              <h3>Gestor comercial</h3>
+              <p class="company">Tirant Lo Blanch</p>
+            </div>
+            <ul>
+              <li>Comercializó software especializado: bases de datos jurídicas y Compliance Penal.</li>
+              <li>Participó en campañas de marketing digital vinculadas a la actividad comercial.</li>
+              <li>Gestionó datos, contratos y seguimiento del ciclo de contratación.</li>
+              <li>Prestó soporte posventa, formación técnica y resolución de incidencias.</li>
+              <li>Formó a nuevas incorporaciones del equipo comercial.</li>
+              <li>Preparó informes analíticos de métricas de venta.</li>
+            </ul>
+            <div class="level-box">
+              <h4>Estándar profesional del rol · referencia actual</h4>
+              <div class="level-grid">
+                <p><strong>Herramientas</strong>CRM · demostración de producto · email marketing · soporte posventa</p>
+                <p><strong>IA aplicable</strong>Personalización de demostraciones y borradores de soporte con revisión comercial y técnica</p>
+                <p><strong>Método</strong>Venta consultiva · ciclo contractual · onboarding · seguimiento posventa</p>
+                <p><strong>Indicadores</strong>Oportunidades · cierres · adopción · incidencias resueltas</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div>
+              <time datetime="2015-07/2017-05">Jul. 2015 — May. 2017</time>
+              <h3>Planificación, liderazgo y atención</h3>
+              <p class="company">Emergia Contact Center · Wizink Bank</p>
+              <div class="role-list" aria-label="Puestos desempeñados"><span>Técnico de planificación</span><span>Team Leader</span><span>Asesor telefónico</span></div>
+            </div>
+            <ul>
+              <li>Planificó capacidad, recursos, turnos, vacaciones, permisos y cobertura operativa.</li>
+              <li>Supervisó la operación en tiempo real y el cumplimiento de SLA y métricas.</li>
+              <li>Definió acciones correctivas ante desviaciones operativas.</li>
+              <li>Lideró un equipo de atención al cliente y venta cruzada.</li>
+              <li>Gestionó escalados, soporte avanzado, acompañamiento y desempeño.</li>
+              <li>Atendió llamadas para activaciones, incidencias y venta cruzada.</li>
+              <li>Elaboró informes de calidad, ventas e incidencias.</li>
+            </ul>
+            <div class="level-box">
+              <h4>Estándar profesional del rol · referencia actual</h4>
+              <div class="level-grid">
+                <p><strong>Herramientas</strong>WFM · plataforma omnicanal · calidad de llamadas · dashboard operativo</p>
+                <p><strong>IA aplicable</strong>Previsión de demanda, síntesis de llamadas y muestreo de calidad con privacidad y supervisión</p>
+                <p><strong>Método</strong>Planificación por intervalos · control intradía · coaching · acciones correctivas</p>
+                <p><strong>Indicadores</strong>SLA · cobertura · calidad · resolución · venta cruzada</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="job">
+            <div>
+              <time datetime="2010-03/2015-02">Mar. 2010 — Feb. 2015</time>
+              <h3>Trayectoria inicial confirmada</h3>
+              <p class="company">Grupo G.S.S. · Pub Margot · Unitono</p>
+              <div class="role-list" aria-label="Contextos"><span>Vodafone</span><span>Trabajo por cuenta propia</span><span>Gas Natural Fenosa</span></div>
+            </div>
+            <ul>
+              <li>Realizó prospección y captación mediante llamadas salientes para Grupo Vodafone.</li>
+              <li>Desarrolló una etapa profesional por cuenta propia en Pub Margot entre 2013 y 2014.</li>
+              <li>Atendió consultas y solicitudes del sector energético para Gas Natural Fenosa.</li>
+              <li>Gestionó altas, bajas y modificaciones contractuales por vía telefónica.</li>
+              <li>Tramitó reclamaciones y resolvió incidencias de clientes.</li>
+              <li>Consolidó experiencia de contacto con cliente antes de asumir funciones de liderazgo y planificación.</li>
+            </ul>
+            <div class="level-box">
+              <h4>Estándar profesional del rol · referencia actual</h4>
+              <div class="level-grid">
+                <p><strong>Herramientas</strong>CRM de atención · telefonía · gestión de contratos · base de conocimiento</p>
+                <p><strong>IA aplicable</strong>Clasificación de motivos y borradores de respuesta con revisión humana; no se atribuye uso histórico</p>
+                <p><strong>Método</strong>Guion de atención · verificación de datos · registro de gestión · escalado</p>
+                <p><strong>Indicadores</strong>Resolución · tiempo de atención · reclamaciones · captación</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capacidades" aria-labelledby="capacidades-title">
+      <div class="shell">
+        <div class="section-head">
+          <h2 id="capacidades-title">Capacidades</h2>
+          <p>Tres núcleos conectados por responsabilidades y herramientas declaradas en la trayectoria.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability"><span class="num">NÚCLEO 01</span><h3>Procesos y control</h3><p>Documentación contractual, remesas, logística, planificación de capacidad, seguimiento de SLA y KPI, informes y resolución de incidencias.</p><p class="capacity-proof">Declarado en Clicars y Emergia · Wizink.</p></article>
+          <article class="capability"><span class="num">NÚCLEO 02</span><h3>Gestión comercial</h3><p>Ciclo de venta, cartera, captación, presupuestos, financiación, venta cruzada, retención y soluciones digitales B2B.</p><p class="capacity-proof">Declarado en cinco etapas comerciales.</p></article>
+          <article class="capability"><span class="num">NÚCLEO 03</span><h3>Coordinación</h3><p>Liderazgo operativo, escalados, soporte avanzado, formación de nuevas incorporaciones y coordinación transversal.</p><p class="capacity-proof">Declarado en Emergia, Tirant y Clicars.</p></article>
+        </div>
+        <div class="tools-layout" id="formacion">
+          <article class="training-card">
+            <div><p class="eyebrow" style="color:#fff">Formación</p><h3>Gestión administrativa y Agile</h3></div>
+            <ol>
+              <li><strong>2025</strong> · Acreditación en Actividades de Gestión Administrativa · Comunidad de Madrid</li>
+              <li><strong>2025</strong> · The Power MBA · Agile</li>
+              <li><strong>2016–2017</strong> · Gestión de personal, planificación de plantillas y motivación de equipos</li>
+              <li><strong>2011</strong> · Técnicas de ventas</li>
+              <li><strong>2006–2007</strong> · Programación de aplicaciones y diseño web</li>
+            </ol>
+          </article>
+          <article class="tools-card">
+            <h3>Herramientas confirmadas</h3>
+            <p>Conocimientos incluidos expresamente en el documento fuente.</p>
+            <div class="chips" aria-label="Herramientas confirmadas">
+              <span>Excel</span><span>Word</span><span>PowerPoint</span><span>Adobe Acrobat Pro</span><span>Bases de datos B2B</span><span>Contact Center omnicanal</span><span>Mailchimp</span><span>Herramientas ágiles</span><span>Visual Basic</span><span>HTML</span><span>Dreamweaver</span><span>Photoshop · nivel medio</span>
+            </div>
+            <div class="market-box">
+              <h4>Evolución recomendada, no experiencia declarada</h4>
+              <p>CRM con automatización, visualización BI, gestión documental y flujos de IA con anonimización y validación humana reforzarían el posicionamiento actual del perfil.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-step" aria-labelledby="disponibilidad-title">
+      <p class="eyebrow" style="color:#f4d889">Siguiente conversación</p>
+      <h2 id="disponibilidad-title">Hablemos de la operación.</h2>
+      <p>Madrid · disponibilidad inmediata · carné B y vehículo propio · presencial, remoto o híbrido</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell"><span>Iago Fuentefría Jareño</span><span>Perfil profesional · septiembre de 2026</span></div>
+  </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const button = document.querySelector('.theme-toggle');
+      const label = document.querySelector('.theme-label');
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      const stored = localStorage.getItem('cv-theme');
+      const preferredDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const applyTheme = (theme) => {
+        const dark = theme === 'dark';
+        root.dataset.theme = theme;
+        button.setAttribute('aria-pressed', String(dark));
+        button.setAttribute('aria-label', dark ? 'Activar modo claro' : 'Activar modo oscuro');
+        label.textContent = dark ? 'Claro' : 'Oscuro';
+        metaTheme.setAttribute('content', dark ? '#0f2625' : '#f4f0e7');
+      };
+
+      applyTheme(stored || (preferredDark ? 'dark' : 'light'));
+      button.addEventListener('click', () => {
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('cv-theme', next);
+        applyTheme(next);
+      });
+    })();
+  </script>
+</body>
+</html>
